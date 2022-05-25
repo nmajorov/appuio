@@ -1,7 +1,7 @@
 issue using helm
 
 
-running helm install:
+innitial running helm install:
 
 
                 #  helm install nmpostgresql bitnami/postgresql --version 11.2.6  -f postgresql-values.yaml --debug
