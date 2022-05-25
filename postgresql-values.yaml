@@ -1,0 +1,32 @@
+---
+global:
+  auth:
+    postgresPassword: "root"
+    username: "niko"
+    password: "niko"
+    database: "niko"
+  image:
+    tag: 10.21.0
+
+resources:
+  limits:
+    cpu: 250m
+    memory: 256Mi
+
+persistence:
+  size: 1Gi
+
+volumePermissions:
+  enabled: false
+  securityContext:
+    runAsUser: "auto"
+
+securityContext:
+  enabled: false
+
+shmVolume:
+  chmod:
+    enabled: false
+
+containerSecurityContext:
+  enabled: false
