@@ -5,28 +5,21 @@ global:
     username: "niko"
     password: "niko"
     database: "niko"
-  image:
-    tag: 10.21.0
+image:
+  tag: 10.21.0
 
-resources:
-  limits:
-    cpu: 250m
-    memory: 256Mi
 
-persistence:
-  size: 1Gi
+primary:
+  resources:
+    limits:
+      cpu: 250m
+      memory: 500Mi
 
-volumePermissions:
-  enabled: false
-  securityContext:
-    runAsUser: "auto"
+  persistence:
+    enabled: true
 
-securityContext:
-  enabled: false
-
-shmVolume:
-  chmod:
+  podSecurityContext:
     enabled: false
 
-containerSecurityContext:
-  enabled: false
+  containerSecurityContext:
+    enabled: false
